@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Certificate Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #certificate-img {
+            display: none;
+            max-width: 90%;
+            height: auto;
+            border: 2px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #1c5899;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d5da2;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="show-button" onclick="showCertificate()">Course Certificate</button>
+    <img id="certificate-img" src="The_Joy_of_Computing_using_Python.jpg" alt="Course Certificate">
+
+    <script>
+        function showCertificate() {
+            document.getElementById('certificate-img').style.display = 'block';
+            document.getElementById('show-button').remove(); // Remove button after click
+        }
+    </script>
+
+</body>
+</html>
